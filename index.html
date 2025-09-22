@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" type="image/png" href="securix.png">
+  <title>Securix</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Full-width animated navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main">
+    <div class="nav-inner">
+      <div class="logo"><img src="securix.png" style="width:9%;"></img>Securix</div>
+      <div class="nav-right">
+        <ul class="nav-links" id="navLinks" aria-expanded="false">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+
+        <!-- Hamburger on the right -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero"><br>
+      <h1 id="typewriter1"></h1>
+      <p class="subtitle">
+        Welcome to your personal Password Manager.<br><br>
+      </p>
+    </section>
+
+    <section class="vault">
+      <div class="vault-head">
+        <h2>Your Passwords</h2>
+      </div>
+
+      <div class="table-wrap">
+        <table id="passwordTable" aria-live="polite">
+          <thead>
+            <tr>
+              <th>Website</th>
+              <th>Username</th>
+              <th>Password</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="passwordBody">
+            <!-- Filled by script.js -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="add-password">
+      <h2>Add a Password</h2>
+      <form id="passForm" novalidate>
+        <div class="form-row">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" required />
+        </div>
+
+        <div class="form-row">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+
+        <div class="form-row">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <div class="form-actions">
+          <button class="btn" type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Toast container (single reusable toast element) -->
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+          <p>&copy; 2025 Password Manager. All Rights Reserved.
+          Designed & Developed by <span class="brand">Raj Joshi</span></p>
+        </div>
+      </footer>
+    
+
+  <script src="script.js"></script>
+</body>
+</html>
